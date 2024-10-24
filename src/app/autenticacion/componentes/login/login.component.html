@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <div class="login-container">
+    <mat-card class="login-card">
+      <!-- Imagen encima del título -->
+      <img mat-card-image src="assets/slogo.png" alt="Login Image" class="login-image">
+  
+      <!-- Título centrado -->
+      <mat-card-title class="login-title">DeliWeb</mat-card-title>
+  
+      <mat-card-content>
+        <form (ngSubmit)="login()" class="login-form">
+          <mat-form-field appearance="fill" class="full-width">
+            <input matInput placeholder="Ingresa tu usuario" [(ngModel)]="username" name="username" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="full-width">
+            <input matInput placeholder="Ingresa tu contraseña" [(ngModel)]="password" name="password" type="password" required>
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" type="submit" class="full-width">Ingresar</button>
+        </form>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <a class="create-account-link" href="/register">Crear una nueva cuenta</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+
+
+
+
+
+</body>
+</html>

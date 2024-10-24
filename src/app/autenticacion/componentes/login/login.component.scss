@@ -1,0 +1,64 @@
+/* Fondo de la pantalla */
+body {
+  background-color: #336ff4;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Estilos de la tarjeta */
+.login-card {
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Imagen de login */
+.login-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Título del login centrado */
+.login-title {
+  margin-top: 15px;
+  margin-bottom: 30px; /* Más espacio entre el título y el formulario */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Formulario al 100% de ancho */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.create-account-link {
+  text-align: left;
+  font-size: 12px;
+  text-decoration: none;
+  color: #336ff4;
+  display: block;
+  margin-top: 10px;
+}
+
+.create-account-link:hover {
+  text-decoration: underline;
+}
