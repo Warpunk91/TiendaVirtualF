@@ -1,5 +1,5 @@
 /* Fondo de la pantalla */
-body {
+.login-container {
   background-color: #336ff4;
   margin: 0;
   height: 100vh;
@@ -61,4 +61,11 @@ body {
 
 .create-account-link:hover {
   text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
 }
