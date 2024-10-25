@@ -14,17 +14,16 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     HttpClientModule,
-    FormsModule,              // Para manejar [(ngModel)]
-    MatCardModule,            // Para el mat-card
-    MatFormFieldModule,       // Para los campos de formulario
-    MatInputModule,           // Para los inputs
+    FormsModule,            
+    MatCardModule,            
+    MatFormFieldModule,       
+    MatInputModule,          
     MatButtonModule,
     CommonModule,
   ],
   providers: [AuthService],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
-  
   
 })
 export class LoginComponent {
@@ -46,12 +45,9 @@ export class LoginComponent {
         console.log('Login exitoso', response);
         this.router.navigate(['/home']);
       },
-      error => {
-        
+      error => {     
         console.error('Error en login', error);
-        
-        this.errorMessage = 'Usuario o contraseña incorrectos';
-       
+        this.errorMessage = 'Usuario o contraseña incorrectos'; 
       }
     );
   } 

@@ -1,15 +1,16 @@
 /* Fondo de la pantalla */
-.login-container {
+.registro-container {
   background-color: #336ff4;
   margin: 0;
   height: 100vh;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Estilos de la tarjeta */
-.login-card {
+.registro-card {
   width: 400px;
   padding: 20px;
   background-color: white;
@@ -19,7 +20,7 @@
 }
 
 /* Imagen de login */
-.login-image {
+.registro-image {
   width: 100px;
   height: 100px;
   margin: 0 auto;
@@ -27,7 +28,7 @@
 }
 
 /* Título del login centrado */
-.login-title {
+.registro-title {
   margin-top: 15px;
   margin-bottom: 15px; /* Más espacio entre el título y el formulario */
   font-size: 24px;
@@ -39,24 +40,4 @@
 .full-width {
   width: 100%;
   margin-bottom: 1px;
-}
-
-.create-account-link {
-  text-align: left;
-  font-size: 12px;
-  text-decoration: none;
-  color: #336ff4;
-  display: block;
-  margin-top: 10px;
-}
-
-.create-account-link:hover {
-  text-decoration: underline;
-}
-
-.error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 10px;
-  text-align: center;
 }
