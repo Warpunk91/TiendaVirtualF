@@ -1,0 +1,51 @@
+<div class="home-container">
+
+    <!-- Sección de Búsqueda -->
+    <section class="search-section">
+      <input 
+        matInput
+        [(ngModel)]="filtro" 
+        (ngModelChange)="filtrarProductos()"
+        class="search-input"
+        placeholder="Buscar productos o restaurantes..."
+        type="text" 
+      />
+    </section>
+  
+    <!-- Sección de Restaurantes -->
+    <section class="restaurants-section">
+      <h3>Restaurantes Destacados</h3>
+      <div class="restaurant-grid" *ngIf="tiendas?.length > 0 ; else noResultadosTienda">
+        <mat-card class="restaurant-card" *ngFor="let tienda of tiendas" >
+          <img mat-card-image [src]="tienda.UrlImgTienda" alt="{{ tienda.nombreTienda }}" />
+          <mat-card-content>
+            <h6>{{ tienda.nombreTienda }}</h6>
+            <p class="restaurant-description">{{ tienda.descripcionTienda }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </section>
+    <ng-template #noResultadosTienda>
+      <p class="noResults">No se encontraron restaurantes para el término de búsqueda ingresado.</p>
+    </ng-template>
+  
+    <!-- Sección de Productos -->
+   <section class="products-section">
+      <h3>Productos Disponibles</h3>
+      <div class="product-grid" *ngIf="productos?.length > 0; else noResultadosProductos">
+        <mat-card class="product-card" *ngFor="let product of productos">
+          <img mat-card-image [src]="product.imagenUrlProducto" alt="{{ product.nombreProducto }}" />
+          <mat-card-content>
+            <h6>{{ product.nombreProducto }}</h6>
+            <p>{{ product.descripcionProducto }}</p>
+            <p class="price">{{ product.precioProducto | currency }}</p>
+          </mat-card-content>
+          <button mat-stroked-button>Agregar al Carrito</button>
+        </mat-card>
+      </div>
+    </section>
+  </div>
+  <ng-template #noResultadosProductos>
+    <p class="noResults">No se encontraron productos para el término de búsqueda ingresado.</p>
+  </ng-template>
+  
